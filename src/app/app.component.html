@@ -1,0 +1,14 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div id="fullPlayer">
+  <div class="embed-responsive embed-responsive-16by9">
+    <video id="videoDisplay" (click)="videoService.playVideo()" src="{{videoService.currentPath}}" width="100%" height="100%"
+      class="embed-responsive-item"></video>
+    <div id="bigPlayButton" (click)="videoService.playVideo()" [hidden]="videoService.isPlaying">
+      <i class="fa fa-play"></i>
+    </div>
+    <div id="videoTitle" [hidden]="videoService.isPlaying">{{videoService.currentTitle}}</div>
+    <vp-options [hidden]="!videoService.showDetails"></vp-options>
+  </div>
+  <vp-progress></vp-progress>
+  <vp-toolbar></vp-toolbar>
+</div>

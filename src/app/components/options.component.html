@@ -1,0 +1,17 @@
+<div id="videoOptions">
+  <div class="container">
+    <h5>{{videoService.currentTitle}}</h5>
+    <div class="row">
+      <div class="col-xs-6">
+        <p>Video Details:</p>
+        <p>{{videoService.currentDesc}}</p>
+      </div>
+      <div class="col-xs-6">
+        <p>Playlist:</p>
+        <ul class="list-group">
+          <li class="list-group-item" *ngFor="let playlistItem of videoService.playlist; let i = index" (click)="videoService.selectedVideo(i)">{{playlistItem.title}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
